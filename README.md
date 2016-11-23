@@ -1,6 +1,6 @@
 # Emoji Plugin
 
-A simple Pyro emoji plugin.
+A simple [Pyro](https://pyrocms.com/) emoji plugin.
 
 # Usage
 
