@@ -1,0 +1,27 @@
+{
+    "name": "daviesgeek/emoji-plugin",
+    "type": "streams-addon",
+    "description": "An emoji plugin for Pyro",
+    "homepage": "https://github.com/daviesgeek/emoji-plugin",
+    "license": "MIT",
+    "authors": [
+          {
+              "name": "Matthew Daviesgeek",
+              "email": "matthew@daviesgeek.com",
+              "homepage": "https://daviesgeek.com",
+              "role": "Owner"
+          }
+    ],
+    "support": {
+        "issues": "https://github.com/daviesgeek/emoji-plugin/issues",
+        "source": "https://github.com/daviesgeek/emoji-plugini"
+    },
+    "autoload": {
+        "psr-4": {
+            "Daviesgeek\\EmojiPlugin\\": "src/"
+        }
+    },
+    "require": {
+        "emojione/emojione": "^2.2"
+    }
+}
