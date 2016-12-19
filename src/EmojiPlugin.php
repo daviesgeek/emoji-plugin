@@ -1,7 +1,7 @@
 <?php namespace Daviesgeek\EmojiPlugin;
 
 use Anomaly\Streams\Platform\Addon\Plugin\Plugin;
-use Emojione\Emojione;
+use Daviesgeek\EmojiPlugin\Command\GetImageInstance;
 use Twig_SimpleFunction;
 
 class EmojiPlugin extends Plugin
@@ -17,8 +17,8 @@ class EmojiPlugin extends Plugin
         return [
             new Twig_SimpleFunction(
                 'emoji',
-                function ($string) {
-                    return Emojione::shortnameToImage(':' . str_replace(':', '', $string) . ':');
+                function ($shortname) {
+                    return $this->dispatch(new GetImageInstance(':' . str_replace(':', '', $shortname) . ':'));
                 },
                 [
                     'is_safe' => ['html'],
