@@ -17,8 +17,8 @@ class EmojiPlugin extends Plugin
         return [
             new Twig_SimpleFunction(
                 'emoji',
-                function ($shortname) {
-                    return $this->dispatch(new GetImageInstance(':' . str_replace(':', '', $shortname) . ':'));
+                function ($shortname, $format = 'svg') {
+                    return $this->dispatch(new GetImageInstance(':' . str_replace(':', '', $shortname) . ':', $format));
                 },
                 [
                     'is_safe' => ['html'],
