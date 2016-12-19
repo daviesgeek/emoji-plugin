@@ -5,18 +5,23 @@ A simple [Pyro](https://pyrocms.com/) emoji plugin.
 # Usage
 
 ```twig
-{{ emoji('smile') | raw }}
+{{ emoji('smile').width(100) | raw }}
 ```
 
 Or you can use the full shortcode:
 
 ```twig
-{{ emoji(':smile:') | raw }}
+{{ emoji('smile').width(100) | raw }}
+```
+
+Or just the URL:
+```twig
+{{ emoji('smile').width(100).url | raw }}
 ```
 
 Get the full list of shortcodes [here](http://emoji.codes/).
 
-Note: this plugin currently only outputs PNG images. At a later time, I'll add settings and support for SVG images too.
+Returns a [Streams Image](https://pyrocms.com/documentation/streams-platform/v1.1#services/image) instance.
 
 # License
 
