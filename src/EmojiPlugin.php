@@ -16,9 +16,13 @@ class EmojiPlugin extends Plugin
     {
         return [
             new Twig_SimpleFunction(
-                'emoji', function ($string) {
-                return Emojione::shortnameToImage(':' . str_replace(':', '', $string) . ':');
-            }
+                'emoji',
+                function ($string) {
+                    return Emojione::shortnameToImage(':' . str_replace(':', '', $string) . ':');
+                },
+                [
+                    'is_safe' => ['html'],
+                ]
             ),
         ];
     }
